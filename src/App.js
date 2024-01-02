@@ -26,7 +26,7 @@ const App = () => {
     setMovies(data.Search);
   }
   useEffect( () =>{
-    searchMovies('Spiderman');
+    searchMovies('Marvel');
   }, []);
 
   return (
@@ -37,7 +37,6 @@ const App = () => {
           placeholder="Search for movies"
           value={searchTerm}
           onChange={(e)=> setSearchTerm(e.target.value)}
-        
         />
       <img 
         src={SearchIcon}
@@ -45,6 +44,7 @@ const App = () => {
         onClick={()=>searchMovies(searchTerm)}  
       />
       </div>
+      <p className='suggestion'>Try searching DISNEY or SPIDERMAN!</p>
       {movies.length>0
         ? (
         <div className="container">

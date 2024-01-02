@@ -29,11 +29,9 @@ body {
 h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
-  );
+  background: #C6FFDD;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -64,7 +62,7 @@ h1 {
   padding-right: 1rem;
 
   outline: none;
-  color: #a1a1a1;
+  color: #d2d2d2;
   background: #1f2123;
 }
 
@@ -189,6 +187,10 @@ h1 {
 
 .movie:hover div:nth-of-type(1) {
   opacity: 1;
+}
+.suggestion {
+  color: white;
+  opacity: 80%;
 }
 
 @media screen and (max-width: 600px) {
